@@ -120,6 +120,7 @@ void MainWindow::initStatusBar()
     bar->addWidget(statusLabel2);
     bar->addWidget(statusLabel3);
 
+    statusLabel1->setText(tr("made by Chuwei"));
     statusLabel2->setText(tr("0000-00-00 00:00::00 星期 "));
     statusLabel3->setText(tr("欢迎使用地铁换乘指南,详情帮助"));
 }
@@ -677,7 +678,10 @@ void MainWindow::on_actionAuthor_triggered()
     QMessageBox box;
     box.setWindowTitle(tr("关于制作者"));
     box.setIcon(QMessageBox::Information);
+    box.setText(tr("Author : Chuwei \n"
                    "School : QST \n"
+                   "Major : Electronic Information Engineering \n"
+                   "Emai : 1096242366@qq.com \n"));
     box.addButton(tr("确定"),QMessageBox::AcceptRole);
     if(box.exec() == QMessageBox::Accepted)
         box.close();
